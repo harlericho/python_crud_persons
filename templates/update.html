@@ -1,0 +1,27 @@
+{% extends 'layout.html'%}
+{% block content%}
+<div class="card border-success" style="background: black; color: aliceblue;">
+    <div class="card-body">
+        <h4 class="card-title">Form of persons</h4>
+        <form action="/update/{{data.id}}" method="post">
+            <div class="mb-3">
+                <label for="names" class="form-label">Names</label>
+                <input type="text" class="form-control" name="names" aria-describedby="helpId" placeholder="Names"
+                    autofocus required value="{{data.names}}" style="background: black; color: aliceblue;">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" aria-describedby="helpId" placeholder="Email"
+                    required value="{{data.email}}" style="background: black; color: aliceblue;">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" name="phone" minlength="10" maxlength="10"
+                    aria-describedby="helpId" placeholder="Phone" required value="{{data.phone}}" style="background: black; color: aliceblue;">
+            </div>
+            <button type="submit" class="btn btn-success btn-sm" title="Update"><i class="far fa-edit"></i> Update</button>
+            <a href="{{url_for('persons.index')}}" class="btn btn-secondary btn-sm" title="Go back"> <i class="fas fa-backspace"></i> Go back</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

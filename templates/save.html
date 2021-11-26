@@ -1,0 +1,23 @@
+<div class="card border-secondary">
+    <div class="card-body" style="background: black; color: aliceblue;">
+        <h4 class="card-title">Form of persons</h4>
+        <form action="/add" method="post">
+            <div class="mb-3">
+                <label for="names" class="form-label">Names</label>
+                <input type="text" class="form-control" name="names" aria-describedby="helpId"
+                    placeholder="Names" autofocus required style="background: black; color: aliceblue;">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" aria-describedby="helpId"
+                    placeholder="Email" required style="background: black; color: aliceblue;">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" name="phone" minlength="10" maxlength="10"
+                    aria-describedby="helpId" placeholder="Phone" required style="background: black; color: aliceblue;">
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm" ><i class="far fa-save"></i> Save</button>
+        </form>
+    </div>
+</div>
